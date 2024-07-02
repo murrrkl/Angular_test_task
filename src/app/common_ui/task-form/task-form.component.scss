@@ -92,7 +92,7 @@ select, .custom_select {
     height: 2vw;
   }
 
-  .custom_select, #taskName {
+  .custom_select, input[type = "text"] {
     height: 4vw;
   }
 
