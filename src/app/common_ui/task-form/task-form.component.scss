@@ -43,7 +43,7 @@ select, .custom_select {
   width: 22vw;
 }
 
-.custom_select, #taskName {
+.custom_select, input[type = "text"] {
   height: 3vw;
 }
 
