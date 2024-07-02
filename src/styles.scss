@@ -110,21 +110,6 @@ input[type="radio"]:checked::after {
 
 @media only screen and (max-width: 767px) {
   :root {
-<<<<<<< HEAD
-    --gap: 15px;
-  }
-
-  button {
-    height: 6vw;
-  }
-
-  .blue_btn {
-    width: 18vw;
-    font-size: 1.4vw;
-  }
-
-  .main_header {
-    font-size: 3vw;
     --gap: 12px;
   }
 
