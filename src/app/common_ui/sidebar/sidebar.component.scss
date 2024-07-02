@@ -1,0 +1,53 @@
+.side_bar_wrapper {
+  display: grid;
+  grid-gap: var(--gap);
+}
+
+.side_bar_box {
+  border: 1px solid var(--border_color);
+  padding: 2vw 1.5vw 1.5vw;
+  background: var(--light_color);
+  border-radius: var(--border_radius);
+}
+
+.side_bar_title {
+  font: normal 500 1vw "Montserrat";
+  color: var(--light_color_text);
+  margin-bottom: 1.2vw;
+}
+
+.double_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.double_box div {
+  width: 160px;
+}
+
+.side_bar_label {
+  font: normal 300 1.1vw "Montserrat";
+  color: var(--dark_color_text);
+}
+
+.checkbox_wrapper {
+  display: grid;
+  grid-gap: 0.9vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .side_bar_wrapper {
+    grid-template-columns: 1.5fr 3fr; // Так выглядит лучше  :)
+    /* grid-template-columns: 1fr; */
+    width: 100%;
+  }
+
+  .double_box div {
+    width: 20vw;
+  }
+
+  .side_bar_title, .side_bar_label {
+    font-size: 1.4vw;
+  }
+}

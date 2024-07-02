@@ -1,0 +1,35 @@
+<h1 class = "main_header">Просмотр задачи</h1>
+<main>
+  <div class = "btn_wrapper">
+    <div class = "left_btn_section">
+      <button [routerLink]="['/']" class = "back_btn">Назад</button>
+      <button (click)="updateTask(taskData)" class = "blue_btn">Редактировать</button>
+    </div>
+    <button class = "red_btn" (click)="deleteTask(taskData.id)">Удалить</button>
+  </div>
+  <div class = "task_wrapper">
+    <div class = "prop_box">
+      <h2 class = "prop_name">Название задачи</h2>
+      <p class = "prop_val">{{ taskData.name }}</p>
+    </div>
+    <div class = "prop_box">
+      <h2 class = "prop_name">Дата содания</h2>
+      <p class = "prop_val"> {{ dateTransformation(taskData.date)}}</p>
+    </div>
+    <div class = "prop_box">
+      <h2 class = "prop_name">Приоритет</h2>
+      <p class = "prop_val">{{ taskData.priority }}</p>
+    </div>
+    <div class = "prop_box">
+      <h2 class = "prop_name">Отметки</h2>
+      <p class = "prop_val">{{ taskData.labels }}</p>
+    </div>
+    <div class = "prop_box">
+      <h2 class = "prop_name">Описание</h2>
+      <p class = "prop_val">{{ taskData.description }}</p>
+    </div>
+  </div>
+
+</main>
+
+<router-outlet></router-outlet>

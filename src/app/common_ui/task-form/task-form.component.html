@@ -1,0 +1,66 @@
+<form *ngIf="formMode === 'add'; else editMode" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Форма для добавления -->
+    <label>Название задачи:</label>
+    <input  formControlName="name" type="text">
+
+    <label for="priority">Приоритет:</label>
+    <div class="custom_select">
+      <div class="selected_option" (click)="toggleOptions($event)">
+        {{ selectedValue }}
+      </div>
+      <select formControlName="priority" id="priority" [(ngModel)]="selectedValue" (change)="onPriorityChange($event)">
+        <option selected value="low">low</option>
+        <option value="normal">normal</option>
+        <option value="high">high</option>
+      </select>
+      <div class="select_arrow"></div>
+    </div>
+
+    <label>Отметки:</label>
+    <select formControlName="labels" multiple>
+      <option value="research">research</option>
+      <option value="design">design</option>
+      <option value="development">development</option>
+    </select>
+
+    <label>Описание:</label>
+    <textarea formControlName="description"></textarea>
+
+    <button class = "blue_btn" type="submit">Сохранить</button>
+</form>
+
+<ng-template #editMode>
+  <form (ngSubmit)="updateTask()" [formGroup]="update_form">
+    <!-- Форма для редактирования -->
+    <input  formControlName="id" type="hidden">
+    <input  formControlName="date" type="hidden">
+
+    <label>Название задачи:</label>
+    <input formControlName="name" type="text">
+
+    <label for="priority">Приоритет:</label>
+    <div class="custom_select">
+      <div class="selected_option" (click)="toggleOptions($event)">
+        {{ update_form.get('priority')?.value}}
+      </div>
+      <select formControlName="priority" (change)="onPriorityChange($event)">
+        <option selected value="low">low</option>
+        <option value="normal">normal</option>
+        <option value="high">high</option>
+      </select>
+      <div class="select_arrow"></div>
+    </div>
+
+    <label>Отметки:</label>
+    <select formControlName="labels" multiple>
+      <option value="research">research</option>
+      <option value="design">design</option>
+      <option value="development">development</option>
+    </select>
+
+    <label>Описание:</label>
+    <textarea formControlName="description"></textarea>
+
+    <button class = "blue_btn" type="submit">Сохранить</button>
+  </form>
+</ng-template>

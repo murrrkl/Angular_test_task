@@ -1,0 +1,9 @@
+<h1 class = "main_header">Редактирование</h1>
+<main>
+  <button [routerLink]="['/']" class = "back_btn">Назад</button>
+  <div class = "task_form_wrapper">
+    <app-task-form [taskData]="taskData" [formMode]="'edit'"></app-task-form>
+  </div>
+</main>
+
+<router-outlet></router-outlet>

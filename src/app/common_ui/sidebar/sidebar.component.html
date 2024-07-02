@@ -1,0 +1,51 @@
+<div class = "side_bar_wrapper">
+  <div class = "side_bar_box">
+    <h1 class = "side_bar_title">СОРТИРОВКА</h1>
+    <div class = "checkbox_wrapper">
+      <div class = "checkbox-container">
+        <input type = "radio" name = "sort" checked id = "new" (change)="onSortChange('new')" >
+        <label class = "side_bar_label" for = "new">Новые</label>
+      </div>
+      <div class = "checkbox-container">
+        <input type = "radio" name = "sort" id = "last" value="last" (change)="onSortChange('last')">
+        <label class = "side_bar_label" for = "last">Старые</label>
+      </div>
+    </div>
+  </div>
+  <div class = "side_bar_box double_box">
+    <div>
+      <h1 class = "side_bar_title">ПРИОРИТЕТ</h1>
+      <div class = "checkbox_wrapper">
+        <div class="checkbox-container">
+          <input type = "checkbox" name = "low" id = "low" (change)="onFilterPriority('low')">
+          <label class = "side_bar_label" for = "low">Low</label>
+        </div>
+        <div class="checkbox-container">
+          <input type = "checkbox" name = "normal"  id = "normal"  (change)="onFilterPriority('normal')">
+          <label class = "side_bar_label" for = "normal">Normal</label>
+        </div>
+        <div class="checkbox-container">
+          <input type = "checkbox" name = "low" id = "high"  (change)="onFilterPriority('high')">
+          <label class = "side_bar_label" for = "high">High</label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 class = "side_bar_title">ОТМЕТКА</h1>
+      <div class = "checkbox_wrapper">
+        <div class="checkbox-container">
+          <input type = "checkbox" name = "research" id = "research" (change)="onFilterLabel('research')">
+          <label class = "side_bar_label" for = "research">Research</label>
+        </div>
+        <div class="checkbox-container">
+          <input type = "checkbox" name = "research" id = "design" (change)="onFilterLabel('design')">
+          <label class = "side_bar_label" for = "design">Design</label>
+        </div>
+        <div class="checkbox-container">
+          <input type = "checkbox" name = "research" id = "development" (change)="onFilterLabel('development')">
+          <label class = "side_bar_label" for = "development">Development</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

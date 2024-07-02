@@ -1,1 +1,128 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+
+:root {
+  --red_btn_color: #F24A49;
+  --dark_red_btn_color: #DA2E2D;
+  --blue_btn_color: #0391DB;
+  --dark_blue_btn_color: #0788CB;
+  --light_color: #FFFFFF;
+  --border_color: #DCDCDC;
+  --light_color_text: #aeabab;
+  --dark_color_text: #000000;
+  --bg_color: #F8FAFE;
+  --gap: 20px;
+  --border_radius: 2.5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  height: 4vw;
+  cursor: pointer;
+}
+
+body {
+  background: var(--bg_color);
+}
+
+.blue_btn {
+  width: 12vw;
+  color: var(--light_color);
+  background-color: var(--blue_btn_color);
+  font: normal 300 1.1vw "Montserrat";
+  border: none;
+  padding: 10px;
+  border-radius: var(--border_radius);
+  transition: 0.5s;
+}
+
+.blue_btn:hover {
+  background: var(--dark_blue_btn_color);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border: 1px solid var(--blue_btn_color);
+  cursor: pointer;
+  margin-right: 0.9vw;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="checkbox"]:checked::before {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url('/assets/images/mark.png') center/cover no-repeat;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+
+input[type="checkbox"]::before, input[type="radio"]::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"]  {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--blue_btn_color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main_header {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  font: normal 300 2vw "Montserrat";
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --gap: 15px;
+  }
+
+  button {
+    height: 6vw;
+  }
+
+  .blue_btn {
+    width: 18vw;
+    font-size: 1.4vw;
+  }
+
+  .main_header {
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,34 @@
+.task_card {
+  border: 1px solid var(--border_color);
+  padding: 2vw 1.5vw 1.5vw;;
+  background: var(--light_color);
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  transition: 0.5s;
+  grid-gap: 0.5vw;
+  border-radius: var(--border_radius);
+}
+
+.task_card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.task_name {
+  font: normal 500 2vw "Montserrat";
+}
+
+.labels {
+  font: normal 300 1vw "Montserrat";
+}
+
+@media only screen and (max-width: 767px) {
+
+  .task_name {
+    font-size: 2.4vw;
+  }
+
+  .labels {
+    font-size: 1.4vw;
+  }
+}

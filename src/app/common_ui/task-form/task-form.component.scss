@@ -1,0 +1,102 @@
+form {
+  padding: 2vw 1.5vw 1.5vw;
+  border: 1px solid var(--border_color);
+  color: var(--light_color_text);
+  background: var(--light_color);
+  border-radius: 3px;
+}
+
+label {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+  font: normal 500 1.1vw "Montserrat";
+}
+
+.selected_option {
+  color: var(--dark_color_text);
+}
+
+input, textarea, select, .custom_select {
+  border: 1px solid var(--border_color);
+  border-radius: 3px;
+  background: var(--light_color);
+  font: normal 300 1vw "Montserrat";
+  padding: 1vw;
+  margin-bottom: 2vw;
+}
+
+select[multiple] {
+  height: 6.5vw;
+}
+
+textarea, input[type = "text"] {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 7.5vw;
+}
+
+select, .custom_select {
+  width: 22vw;
+}
+
+.custom_select, #taskName {
+  height: 3vw;
+}
+
+.custom_select {
+  position: relative;
+}
+
+.custom_select .selected_option {
+  cursor: pointer;
+}
+
+.custom_select select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.select_arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 1vw;
+  height: 1vw;
+  background-image: url("/assets/images/arrow.png");
+  background-size: cover;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  input, textarea, select, .custom_select {
+    font-size: 1.5vw;
+  }
+
+  label {
+    font-size: 1.4vw;
+  }
+
+  .select_arrow {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .custom_select, #taskName {
+    height: 4vw;
+  }
+
+  select[multiple] {
+    height: 9vw;
+  }
+}

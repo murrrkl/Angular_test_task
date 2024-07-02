@@ -1,0 +1,9 @@
+<h1 class = "main_header">Добавление задачи</h1>
+<main>
+  <button [routerLink]="['/']" class = "back_btn">Назад</button>
+  <div class = "task_form_wrapper">
+    <app-task-form [formMode]="'add'"></app-task-form>
+  </div>
+</main>
+
+<router-outlet></router-outlet>

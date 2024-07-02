@@ -1,0 +1,21 @@
+@if (task_) {
+  <div class = "task_card">
+    <strong class = "task_name">{{ task_.name }}</strong>
+    <p class = "labels">
+      cоздано:
+      <span>{{getRelativeTime(task_.date)}}</span>
+    </p>
+    <p class = "labels">
+      Приоритет:
+      <span>{{ task_.priority }}</span>
+    </p>
+    @if (task_.labels) {
+      <p class = "labels">
+        Отметки:
+        <span>
+          {{task_.labels}}
+        </span>
+      </p>
+    }
+  </div>
+}

@@ -1,0 +1,32 @@
+main {
+  display: grid;
+  grid-gap: var(--gap);
+  padding: 10px 40px;
+}
+
+.back_btn {
+  width: 10vw;
+  border: 1px solid var(--border_color);
+  color: var(--light_color_text);
+  background-color: var(--light_color);
+  font: normal 300 1.1vw "Montserrat";
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.back_btn:hover {
+  background: #edebeb;
+}
+
+@media only screen and (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 10px 20px;
+  }
+
+  .back_btn {
+    width: 12vw;
+    font-size: 1.4vw;
+  }
+}

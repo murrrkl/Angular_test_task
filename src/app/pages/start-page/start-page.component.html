@@ -1,0 +1,17 @@
+<h1 class = "main_header">Список задач</h1>
+<main>
+  <button [routerLink]="['add_task']"  class="blue_btn mobile">Добавить задачу</button>
+  <app-sidebar></app-sidebar>
+  <div>
+    <button [routerLink]="['add_task']"  class="blue_btn">Добавить задачу</button>
+    <div class = "task_card_wrapper">
+      @for (task of tasks; track task.id) {
+        <app-task-card (click)="goToEditTask(task)"
+                       [task_]="task"
+        ></app-task-card>
+      }
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>

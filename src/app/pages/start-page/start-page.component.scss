@@ -1,0 +1,43 @@
+//:host {
+//  display: grid;
+//  grid-template-columns: 300px 1fr;
+//}
+
+.task_card_wrapper {
+  display: grid;
+  grid-gap: var(--gap);
+  margin-top: var(--gap);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: var(--gap);
+  padding: 10px 40px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --gap: 10px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    padding: 10px 20px;
+  }
+
+  .blue_btn {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .task_card_wrapper {
+    margin-top: 0;
+  }
+}
