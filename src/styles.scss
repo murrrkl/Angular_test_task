@@ -110,6 +110,7 @@ input[type="radio"]:checked::after {
 
 @media only screen and (max-width: 767px) {
   :root {
+<<<<<<< HEAD
     --gap: 15px;
   }
 
@@ -124,5 +125,21 @@ input[type="radio"]:checked::after {
 
   .main_header {
     font-size: 3vw;
+=======
+    --gap: 12px;
+  }
+
+  button {
+    height: 8vw;
+  }
+
+  .blue_btn {
+    width: 24vw;
+    font-size: 1.9vw;
+  }
+
+  .main_header {
+    font-size: 4.2vw;
+>>>>>>> 9a8e585 (styles updated)
   }
 }

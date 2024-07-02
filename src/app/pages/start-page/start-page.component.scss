@@ -22,7 +22,11 @@ main {
 
 @media only screen and (max-width: 767px) {
   :root {
+<<<<<<< HEAD
     --gap: 10px;
+=======
+    --gap: 8px;
+>>>>>>> 9a8e585 (styles updated)
   }
   main {
     grid-template-columns: 1fr;
